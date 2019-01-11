@@ -1,17 +1,19 @@
 Recommendation Project:
 
+Knowledge Required: HDFS,MapReduce,Hive,SQL
+
 1)Ingestion
 
-  1)Sqoop Import users,ratings,movies into Hadoop.
-  2) create External Hive tables.
+  1)Sqoop Import users,ratings,movies into HDFS(Hadoop Distributed File System).
+  2)Create External Hive tables.
 
 2) Association Mining.
 
    Preprocessing(Ip:Rating,Op:GoodRating)
     1) Remove any movie whose rating < 3.
-    2) Remove all movies whose votes < Threshold(5)
+    2) Remove all movies whose votes < 5
 
    Recommendations(Ip:GoodRating,Op:MoviesRecommendations)
     1) Find out the similar user
-    2) Find out the movies which was watched by similarr user which was not watched by base user.
+    2) Find out the movies which was watched by similar user which was not watched by base user.
 
