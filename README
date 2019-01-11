@@ -1,0 +1,17 @@
+Recommendation Project:
+
+1)Ingestion
+
+  1)Sqoop Import users,ratings,movies into Hadoop.
+  2) create External Hive tables.
+
+2) Association Mining.
+
+   Preprocessing(Ip:Rating,Op:GoodRating)
+    1) Remove any movie whose rating < 3.
+    2) Remove all movies whose votes < Threshold(5)
+
+   Recommendations(Ip:GoodRating,Op:MoviesRecommendations)
+    1) Find out the similar user
+    2) Find out the movies which was watched by similarr user which was not watched by base user.
+
